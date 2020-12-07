@@ -49,6 +49,29 @@ After doing the comparative study,GY-906 MLX90614 sensor(FOV 80 degree)was chose
 This sensor is used to calculate the presence of employee infront of the temperature sensor.If no object/person is detected the system will not record temperature.
 
 
+![hardware](https://user-images.githubusercontent.com/59678585/101358114-6720a100-38c0-11eb-91de-986e77fd756e.JPG)
+
+# Face Recognition
+
+This system could recognise faces from the trained list of people. face_recognition library  which is built on top of dlib is used here.We use a  loop to create a list of all known face encodings.Here, we are using the compare_face() function to compare each known face to our unknown face. The result is a list of True/False values in the same order as the known faces we passed in. A True means the faces matched and a False means it wasn’t a match. The tolerance value lets us control how strict the matching is. To draw a rectangle around the recognized face in OpenCV, we need the top left and bottom right coordinates, and we use cv2.rectangle to draw it.
+
+We have implemented face recognition using OpenCV and Python. We have used the following libraries
+
+1) OpenCV: OpenCV is an image and video processing library and is used for image and video analysis, like facial detection, license plate reading, photo editing, advanced robotic vision, optical character recognition, and a whole lot more.
+
+2) dlib: The dlib library contains our implementation of “deep metric learning” which is used to construct our face embeddings used for the actual recognition process. 
+
+3) Face_recognition: The face_recognition  library wraps around dlib’s facial recognition functionality, and this library is super easy to work with and we will be using this in our code. 
+
+## Working:
+We use a  loop to create a list of all known face encodings. Then we have to open the camera to capture the person’s face. To identify the person, grab a single frame of video and convert the image from BGR color to RGB color which face_recognition uses. Then, find all the faces and face encodings in the frame of video, loop through each face in this frame of video and see if the face is a match for the known face(s). If a match was found in known_face_encodings, just use the first one and return the name. Or instead, use the known face with the smallest distance to the new face. If a match isn't found then return unknown.
+
+
+
+
+
+
+
 
 
 
