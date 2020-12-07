@@ -10,7 +10,7 @@ The schema design for the entire system is given as a class diagram below. The E
 
 ![td](https://user-images.githubusercontent.com/59678585/101355608-d0061a00-38bc-11eb-941a-1ae9e364e604.png)
 
-# Hardware Requirements:
+## Hardware Requirements:
  
  1)INFRARED TEMPERATURE SENSOR GY-906 MLX90614 SENSOR
  
@@ -21,13 +21,13 @@ The schema design for the entire system is given as a class diagram below. The E
  4)Camera
  
 
-# Required Microcontroller:
+## Required Microcontroller:
 
  1)RASPBERRY PI 
  
  2)ARDUINO
 
-# Python Packages Required:
+## Python Packages Required:
 
  1)Pyzbar
  
