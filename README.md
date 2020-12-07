@@ -10,32 +10,45 @@ The schema design for the entire system is given as a class diagram below. The E
 
 ![td](https://user-images.githubusercontent.com/59678585/101355608-d0061a00-38bc-11eb-941a-1ae9e364e604.png)
 
-## Hardware
+# Hardware Requirements:
+ 
+ 1)INFRARED TEMPERATURE SENSOR GY-906 MLX90614 SENSOR
+ 
+ 2)IR SENSOR
+ 
+ 3)LCD
+ 
+ 4)Camera
+ 
 
-Sensors and other hardwares:
-1)INFRARED TEMPERATURE SENSOR GY-906 MLX90614 SENSOR
-2)IR SENSOR
-3)LCD
-4)Camera
+# Required Microcontroller:
 
-Microcontroller:
-1)RASPBERRY PI
-2)ARDUINO
+ 1)RASPBERRY PI 
+ 
+ 2)ARDUINO
 
-Python Packages:
-1)Pyzbar
-2)Mysql Connector
-3)PyMLX90614
-4)OpenCV
-5)Rpi.GPIO
-6)RPLCD
+# Python Packages Required:
 
-## GY-906 MLX90614
+ 1)Pyzbar
+ 
+ 2)Mysql Connector
+ 
+ 3)PyMLX90614
+ 
+ 4)OpenCV
+ 
+ 5)Rpi.GPIO
+ 
+ 6)RPLCD
+
+### GY-906 MLX90614
 After doing the comparative study,GY-906 MLX90614 sensor(FOV 80 degree)was chosen for this project.This sensor uses IR energy to detect the temperature of the object.It is manufactured by Melexis Microelectronics Integrated system.It has two devices embedded in it, one is the infrared thermopile detector (sensing unit) and the other is a signal conditioning DSP device (computational unit).
  The sensing unit in the sensor measures how much IR energy is emitted by a targeted object and the computational unit converts it into temperature value and outputs the data through I2C communication protocol. The sensor measures both the object temperature and ambient temperature to calibrate the object temperature value.
 
-## IR SENSOR:
+### IR SENSOR:
 This sensor is used to calculate the presence of employee infront of the temperature sensor.If no object/person is detected the system will not record temperature.
+
+
 
 
 
