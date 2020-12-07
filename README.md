@@ -66,7 +66,13 @@ We have implemented face recognition using OpenCV and Python. We have used the f
 ## Working:
 We use a  loop to create a list of all known face encodings. Then we have to open the camera to capture the person’s face. To identify the person, grab a single frame of video and convert the image from BGR color to RGB color which face_recognition uses. Then, find all the faces and face encodings in the frame of video, loop through each face in this frame of video and see if the face is a match for the known face(s). If a match was found in known_face_encodings, just use the first one and return the name. Or instead, use the known face with the smallest distance to the new face. If a match isn't found then return unknown.
 
+# Mobile App
 
+An mobile application is also developed for this system.This can be used as an alternative to face recognition.The application has an unique QR Code for each employee.They need to scan this QR in the camera and then record their temperature.
+
+# Admin Portal
+
+The Admin can monitor the overall screening process using this web portal. This person will have access to all the employee details and will also have the access to add a new employee to the database. If there is any change in the personal details like address or phone number or even in shift details  of the employee, the admin can update it with the help of this web application. The home page has recent screening entries. The navigation has different tabs like Home, Employee Details, History, Advanced Search and Add Employee. The add employee option allows admin to add a new employee details. The admin is able to filter the employees based on their email, shift,date, month, employee id and department. 
 
 
 
