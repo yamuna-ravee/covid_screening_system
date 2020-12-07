@@ -8,4 +8,7 @@ The details of the employee such as user id,photo,temperature,check in time, che
 The schema design for the entire system is given as a class diagram below. The Employee table contains all the personal details of the employees.User Id is the primary key in this table.The Reset Password table is designed for keeping track of the forgot password option in the mobile app.TokenId and UserId are the primary key and foreign key respectively.When an employee clicks the forgot password button,he/she will be prompted to enter their email address. A reset password link will be sent to  their email and a token will be generated to them.This will be valid for 15 minutes.After 15 minutes the reset password link becomes invalid as the token generated for the employee will be deleted after 15 minutes.The temperature table holds details like checkin,checkout,working hours,temperature,distance and shift.Working hours is calculated by differencing the check in and check out time.Distance column stores the distance between the temperature sensor and the employee.It is stored for error debugging.The database has a separate temperature table for each month.
 
 
+![td](https://user-images.githubusercontent.com/59678585/101355608-d0061a00-38bc-11eb-941a-1ae9e364e604.png)
+
+
 
