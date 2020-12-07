@@ -20,12 +20,9 @@ The schema design for the entire system is given as a class diagram below. The E
  
  4)Camera
  
-
-## Required Microcontroller:
-
- 1)RASPBERRY PI 
+ 5)RASPBERRY PI 
  
- 2)ARDUINO
+ 6)ARDUINO
 
 ## Python Packages Required:
 
@@ -51,7 +48,7 @@ This sensor is used to calculate the presence of employee infront of the tempera
 
 ![hardware](https://user-images.githubusercontent.com/59678585/101358114-6720a100-38c0-11eb-91de-986e77fd756e.JPG)
 
-# Face Recognition
+## Face Recognition
 
 This system could recognise faces from the trained list of people. face_recognition library  which is built on top of dlib is used here.We use a  loop to create a list of all known face encodings.Here, we are using the compare_face() function to compare each known face to our unknown face. The result is a list of True/False values in the same order as the known faces we passed in. A True means the faces matched and a False means it wasn’t a match. The tolerance value lets us control how strict the matching is. To draw a rectangle around the recognized face in OpenCV, we need the top left and bottom right coordinates, and we use cv2.rectangle to draw it.
 
@@ -66,11 +63,11 @@ We have implemented face recognition using OpenCV and Python. We have used the f
 ## Working:
 We use a  loop to create a list of all known face encodings. Then we have to open the camera to capture the person’s face. To identify the person, grab a single frame of video and convert the image from BGR color to RGB color which face_recognition uses. Then, find all the faces and face encodings in the frame of video, loop through each face in this frame of video and see if the face is a match for the known face(s). If a match was found in known_face_encodings, just use the first one and return the name. Or instead, use the known face with the smallest distance to the new face. If a match isn't found then return unknown.
 
-# Mobile App
+## Mobile Application:
 
 An mobile application is also developed for this system.This can be used as an alternative to face recognition.The application has an unique QR Code for each employee.They need to scan this QR in the camera and then record their temperature.
 
-# Admin Portal
+## Admin Portal
 
 The Admin can monitor the overall screening process using this web portal. This person will have access to all the employee details and will also have the access to add a new employee to the database. If there is any change in the personal details like address or phone number or even in shift details  of the employee, the admin can update it with the help of this web application. The home page has recent screening entries. The navigation has different tabs like Home, Employee Details, History, Advanced Search and Add Employee. The add employee option allows admin to add a new employee details. The admin is able to filter the employees based on their email, shift,date, month, employee id and department. 
 
